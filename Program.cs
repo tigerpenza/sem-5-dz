@@ -90,66 +90,44 @@
 
 // [3 7 22 2 78] -> 76
 
-double [] CreateRandomArray (int size, int minvalue, int maxValue)              
-{
-    double [] newArray = new double [size];
-    for (int i = 0; i < size; i++)
-    newArray [i] = new Random().NextDouble()  + new Random().Next () ;
+// int[] CreateRandomArray(int size, int minValue, int maxValue)
+// {
+//     int[] newArray = new int[size];
+//     for( int i = 0; i < size; i++)
+//         newArray[i] = new Random().Next(minValue, maxValue +1); 
+//     return newArray;
+// }
 
-    return newArray; 
+// void ShowArray(int[] array)
+// {
+//     for(int i = 0; i < array.Length; i++)
+//         Console.Write(array[i] + " | ");
+//     Console.WriteLine();
+// }
 
-}
+// int MaxNum( int[] array)
+// {
+//     int max = 0;
+//     for(int i = 0; i < array.Length; i++)
+//         if(array[i] > max) max = array[i];
+//     return max;    
+// }
 
-void ShowArray (double [] array)                                               
-   { 
-    for (int i = 0; i < array.Length; i++)
-        Console.Write (array [i] + " | ");      
-
-    Console.WriteLine ( );          
-   }
-
-double Max (double [] array)
-{
-double max = 0;
-
-for (int i = 0; i < array.Length; i++)
-    if (array [i] > max) 
-        {
-            array [i] = max;
-
-         } 
-return max;  
-
-}
-
+// int MinNum( int[] array)
+// {
+//     int min = 0;
+//     for(int i = 0; i < array.Length; i++) 
+//         if(array[i] < min) min = array[i];
+//     return min;    
+// }
 
 
-double Min (double [] array)
-{
-double min = 0;
+// int sizeRandom = new Random().Next(4, 20);
+// int[] myArray = CreateRandomArray(sizeRandom,-100,100);
+// Console.WriteLine();
+// ShowArray(myArray);
+// Console.WriteLine();
 
-for (int i = 0; i < array.Length; i++)
-    if (array [i] < min) 
-        {
-            array [i] = min;
-
-         } 
-return min;  
-
-}
-
-int sizeRandom = new Random().Next(10, 15);
-
-double [] myArray = CreateRandomArray (sizeRandom,-10,10);
-
-Console.WriteLine();
-
-
-ShowArray(myArray);
-
-Console.WriteLine();
-
-Console.WriteLine($"Maximum value: {Max(myArray)} \nMinimum value: {Min(myArray)}");
-double diff = Max(myArray) - Min(myArray);
-Console.WriteLine($" разница между максимальным и минимальным зачением: {diff}");
-
+// Console.WriteLine($"Maximum value: {MaxNum(myArray)} \nMinimum value: {MinNum(myArray)}");
+// int diff = MaxNum(myArray) - MinNum(myArray);
+// Console.WriteLine($"The difference between the maximum and minimum elements is: {diff}");
